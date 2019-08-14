@@ -1,0 +1,46 @@
+<ion-card *ngIf="indicateur">
+  <ion-item lines="none">
+    <ion-card-title> {{indicateur.libelle}} </ion-card-title>
+    <ion-icon ios="ios-close" md="md-close" slot="end" color="primary" (click)="goToKpiDetails()"></ion-icon>
+  </ion-item>
+  <ion-item class="faitRestant" lines="none">
+    <ion-text>{{displayIndicateur(indicateur)}} </ion-text>
+  </ion-item>
+
+
+  <div class="indicPercentDisplay">
+    <div class="leftIcon" >
+      <ion-icon ios="ios-arrow-dropleft-circle" md="md-arrow-dropleft-circle" 
+      slot="start" color="primary"   (click)="goToPreviews()">
+    </ion-icon>
+    </div>
+
+    <div class="rightIcon"> 
+        <ion-icon  ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle" 
+        slot="end" color="primary"  [routerLink]="['/indicateur/', 2 ]">
+        </ion-icon>
+    </div>
+
+    <circle-progress [percent]="computePercentage(indicateur) * 100" 
+    [radius]="120" 
+    [lazy]="false" 
+    [titleFontSize]="65"
+    [unitsFontSize]="32" 
+    [showSubtitle]="false" 
+    [showBackground]="false" 
+    [outerStrokeLinecap]="square"
+    [outerStrokeWidth]="12" 
+    [innerStrokeWidth]="12" 
+    [outerStrokeColor]="'#00A951'" 
+    [innerStrokeColor]="'#C7E596'"
+    [animation]="true" 
+    [animationDuration]="250">
+    </circle-progress>
+
+  </div> 
+  <br> <br>
+
+  <ion-card-content>
+    <div class="descIndicateur"> {{indicateur.title_chart}} </div>
+  </ion-card-content>
+</ion-card>

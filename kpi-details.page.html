@@ -1,0 +1,18 @@
+
+<ion-card *ngFor="let indic of indicateurkpi" [routerLink]="['/indicateur/', indic.id]">
+  <ion-card-content>
+    <ion-text class="faitRestant"> {{displayDone(indic)}} </ion-text>
+    <ion-card-title *ngIf="indic">{{indic.libelle}}</ion-card-title>
+    <div class="percentDisplay"> {{computePercentage(indic) | percent }} </div>
+    <ion-progress-bar color="primary" value="{{computePercentage(indic)}}"> </ion-progress-bar>
+  </ion-card-content>
+</ion-card>
+
+<ion-footer>
+  <ion-toolbar color="primary" (click)="goToHome()">
+    <ion-title *ngIf="kpi">{{kpi.label}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

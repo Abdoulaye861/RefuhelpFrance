@@ -1,0 +1,39 @@
+.faitRestant{
+    font-size: 17px;
+    font-weight: bold;
+
+}
+
+.indicPercentDisplay{
+    color: black;
+    text-align: center;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+@media(min-width: 750px){
+    .descIndicateur{
+        text-align: center;
+      } 
+  }
+
+
+  .leftIcon{
+    padding-top: 130px;
+    float: left;
+    padding-left: 5px;
+ 
+
+  }
+
+  .rightIcon{
+    float: right;
+    padding-top: 130px;
+    padding-right: 5px;
+    
+  }
+
+ 
+  
+
+  

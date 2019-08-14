@@ -1,0 +1,16 @@
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      L'application permet de suivre les KPI du chantier Workspace 2020 BDDF. <br> Veuillez sélectionner un KPI
+      ci-dessous :
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item id="labels" class="ion-text-uppercase" lines="none" [routerLink]="['/kpi-details/', kpi.id]"
+      *ngFor="let kpi of kpi">
+      <ion-label  > {{kpi.label}} </ion-label> 
+    </ion-item>
+  </ion-list>
+</ion-content> 

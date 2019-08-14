@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-toggle menu="contactMenu">
+        <ion-button>
+          <ion-icon ios="ios-menu" md="md-menu" slot="icon-only" routerLink="/contact"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+    <ion-title id="dateMaj" class="ion-text-center" *ngIf="kpi"> {{kpi[0].date_maj}} <br>
+      <ion-title id="textMaj"> Dernière date de mise à jour </ion-title>
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-menu-toggle menu="newsMenu">
+        <ion-button>
+          <ion-icon ios="ios-calendar" md="md-calendar" slot="icon-only" routerLink="/news"> </ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
